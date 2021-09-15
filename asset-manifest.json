@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/mint/static/css/main.229d0cf6.chunk.css",
-    "main.js": "/mint/static/js/main.d4113651.chunk.js",
-    "main.js.map": "/mint/static/js/main.d4113651.chunk.js.map",
+    "main.js": "/mint/static/js/main.12b7f4dd.chunk.js",
+    "main.js.map": "/mint/static/js/main.12b7f4dd.chunk.js.map",
     "runtime-main.js": "/mint/static/js/runtime-main.bbf06fe4.js",
     "runtime-main.js.map": "/mint/static/js/runtime-main.bbf06fe4.js.map",
-    "static/js/2.19c6539d.chunk.js": "/mint/static/js/2.19c6539d.chunk.js",
-    "static/js/2.19c6539d.chunk.js.map": "/mint/static/js/2.19c6539d.chunk.js.map",
+    "static/js/2.3bdd78db.chunk.js": "/mint/static/js/2.3bdd78db.chunk.js",
+    "static/js/2.3bdd78db.chunk.js.map": "/mint/static/js/2.3bdd78db.chunk.js.map",
     "static/js/3.69fb809a.chunk.js": "/mint/static/js/3.69fb809a.chunk.js",
     "static/js/3.69fb809a.chunk.js.map": "/mint/static/js/3.69fb809a.chunk.js.map",
     "index.html": "/mint/index.html",
     "static/css/main.229d0cf6.chunk.css.map": "/mint/static/css/main.229d0cf6.chunk.css.map",
-    "static/js/2.19c6539d.chunk.js.LICENSE.txt": "/mint/static/js/2.19c6539d.chunk.js.LICENSE.txt"
+    "static/js/2.3bdd78db.chunk.js.LICENSE.txt": "/mint/static/js/2.3bdd78db.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.bbf06fe4.js",
-    "static/js/2.19c6539d.chunk.js",
+    "static/js/2.3bdd78db.chunk.js",
     "static/css/main.229d0cf6.chunk.css",
-    "static/js/main.d4113651.chunk.js"
+    "static/js/main.12b7f4dd.chunk.js"
   ]
 }
