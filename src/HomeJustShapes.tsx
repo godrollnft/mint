@@ -206,7 +206,7 @@ const Home = (props: HomeProps) => {
           {alertState.message}
         </Alert>
       </Snackbar>
-      <footer>ver. a.0.1</footer>
+      <footer>ver. a.0.2</footer>
     </main>
   );
 };
