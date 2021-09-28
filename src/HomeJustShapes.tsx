@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import Countdown from "react-countdown";
-import { Button, CircularProgress, Snackbar } from "@material-ui/core";
-import Alert from "@material-ui/lab/Alert";
+
+// GR Mui5
+import { Button, CircularProgress, Snackbar, Alert } from '@mui/material';
 
 import * as anchor from "@project-serum/anchor";
 
@@ -205,6 +206,7 @@ const Home = (props: HomeProps) => {
           {alertState.message}
         </Alert>
       </Snackbar>
+      <footer>ver. a.0.1</footer>
     </main>
   );
 };
