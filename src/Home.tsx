@@ -42,6 +42,10 @@ const Home = (props: HomeProps) => {
   const [isSoldOut, setIsSoldOut] = useState(false); // true when items remaining is zero
   const [isMinting, setIsMinting] = useState(false); // true when user got to press MINT
 
+  const [itemsAvailable, setItemsAvailable] = useState(0);
+  const [itemsRedeemed, setItemsRedeemed] = useState(0);
+  const [itemsRemaining, setItemsRemaining] = useState(0);
+
   const [alertState, setAlertState] = useState<AlertState>({
     open: false,
     message: "",
@@ -52,6 +56,32 @@ const Home = (props: HomeProps) => {
 
   const wallet = useAnchorWallet();
   const [candyMachine, setCandyMachine] = useState<CandyMachine>();
+
+  const refreshCandyMachineState = () => {
+    (async () => {
+      if (!wallet) return;
+
+      const {
+        candyMachine,
+        goLiveDate,
+        itemsAvailable,
+        itemsRemaining,
+        itemsRedeemed,
+      } = await getCandyMachineState(
+        wallet as anchor.Wallet,
+        props.candyMachineId,
+        props.connection
+      );
+
+      setItemsAvailable(itemsAvailable);
+      setItemsRemaining(itemsRemaining);
+      setItemsRedeemed(itemsRedeemed);
+
+      setIsSoldOut(itemsRemaining === 0);
+      setStartDate(goLiveDate);
+      setCandyMachine(candyMachine);
+    })();
+  };
 
   const onMint = async () => {
     try {
@@ -116,6 +146,7 @@ const Home = (props: HomeProps) => {
         setBalance(balance / LAMPORTS_PER_SOL);
       }
       setIsMinting(false);
+      refreshCandyMachineState();
     }
   };
 
@@ -128,32 +159,25 @@ const Home = (props: HomeProps) => {
     })();
   }, [wallet, props.connection]);
 
-  useEffect(() => {
-    (async () => {
-      if (!wallet) return;
-
-      const { candyMachine, goLiveDate, itemsRemaining } =
-        await getCandyMachineState(
-          wallet as anchor.Wallet,
-          props.candyMachineId,
-          props.connection
-        );
-
-      setIsSoldOut(itemsRemaining === 0);
-      setStartDate(goLiveDate);
-      setCandyMachine(candyMachine);
-    })();
-  }, [wallet, props.candyMachineId, props.connection]);
+  useEffect(refreshCandyMachineState, [
+    wallet,
+    props.candyMachineId,
+    props.connection,
+  ]);
 
   return (
     <main>
       {wallet && (
-        <p>Address: {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
+        <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
       )}
 
-      {wallet && (
-        <p>Balance: {(balance || 0).toLocaleString()} SOL</p>
-      )}
+      {wallet && <p>Balance: {(balance || 0).toLocaleString()} SOL</p>}
+
+      {wallet && <p>Total Available: {itemsAvailable}</p>}
+
+      {wallet && <p>Redeemed: {itemsRedeemed}</p>}
+
+      {wallet && <p>Remaining: {itemsRemaining}</p>}
 
       <MintContainer>
         {!wallet ? (
@@ -209,7 +233,7 @@ interface AlertState {
 const renderCounter = ({ days, hours, minutes, seconds, completed }: any) => {
   return (
     <CounterText>
-      {hours} hours, {minutes} minutes, {seconds} seconds
+      {hours + (days || 0) * 24} hours, {minutes} minutes, {seconds} seconds
     </CounterText>
   );
 };
