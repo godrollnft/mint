@@ -1,26 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.c0facf03.chunk.css",
-    "main.js": "/static/js/main.97c033a1.chunk.js",
-    "main.js.map": "/static/js/main.97c033a1.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.6d3f1d90.js",
-    "runtime-main.js.map": "/static/js/runtime-main.6d3f1d90.js.map",
-    "static/js/2.55ad391b.chunk.js": "/static/js/2.55ad391b.chunk.js",
-    "static/js/2.55ad391b.chunk.js.map": "/static/js/2.55ad391b.chunk.js.map",
-    "static/js/3.748eebfb.chunk.js": "/static/js/3.748eebfb.chunk.js",
-    "static/js/3.748eebfb.chunk.js.map": "/static/js/3.748eebfb.chunk.js.map",
+    "main.js": "/static/js/main.f9eadc75.chunk.js",
+    "main.js.map": "/static/js/main.f9eadc75.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.5eb0b33e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.5eb0b33e.js.map",
+    "static/js/2.3668879f.chunk.js": "/static/js/2.3668879f.chunk.js",
+    "static/js/2.3668879f.chunk.js.map": "/static/js/2.3668879f.chunk.js.map",
+    "static/js/3.2b109a51.chunk.js": "/static/js/3.2b109a51.chunk.js",
+    "static/js/3.2b109a51.chunk.js.map": "/static/js/3.2b109a51.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.c0facf03.chunk.css.map": "/static/css/main.c0facf03.chunk.css.map",
-    "static/js/2.55ad391b.chunk.js.LICENSE.txt": "/static/js/2.55ad391b.chunk.js.LICENSE.txt",
-    "static/media/1261.81f44e13.mp4": "/static/media/1261.81f44e13.mp4",
-    "static/media/2991.bd45fa10.mp4": "/static/media/2991.bd45fa10.mp4",
+    "static/js/2.3668879f.chunk.js.LICENSE.txt": "/static/js/2.3668879f.chunk.js.LICENSE.txt",
+    "static/media/3094.3748ff8d.mp4": "/static/media/3094.3748ff8d.mp4",
     "static/media/726.dca27e3c.mp4": "/static/media/726.dca27e3c.mp4",
-    "static/media/CubeRegularBlack1.c1447e38.mp4": "/static/media/CubeRegularBlack1.c1447e38.mp4",
-    "static/media/CubeRegularWhite1.13933ae5.mp4": "/static/media/CubeRegularWhite1.13933ae5.mp4",
-    "static/media/CylinderMegaWhite1.a11ca87e.mp4": "/static/media/CylinderMegaWhite1.a11ca87e.mp4",
-    "static/media/TorusMegaBlack1.71454ef8.mp4": "/static/media/TorusMegaBlack1.71454ef8.mp4",
-    "static/media/TorusMiniBlack1.ee509437.mp4": "/static/media/TorusMiniBlack1.ee509437.mp4",
-    "static/media/TorusRegularWhite1.1596f110.mp4": "/static/media/TorusRegularWhite1.1596f110.mp4",
     "static/media/cubeMiniBlack1.5d61ec96.jpeg": "/static/media/cubeMiniBlack1.5d61ec96.jpeg",
     "static/media/cubeRegularWhite1.5de008a7.jpeg": "/static/media/cubeRegularWhite1.5de008a7.jpeg",
     "static/media/cubeRegularWhite2.a3238496.jpeg": "/static/media/cubeRegularWhite2.a3238496.jpeg",
@@ -39,9 +32,9 @@
     "static/media/toys8.45cc5f36.jpg": "/static/media/toys8.45cc5f36.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.6d3f1d90.js",
-    "static/js/2.55ad391b.chunk.js",
+    "static/js/runtime-main.5eb0b33e.js",
+    "static/js/2.3668879f.chunk.js",
     "static/css/main.c0facf03.chunk.css",
-    "static/js/main.97c033a1.chunk.js"
+    "static/js/main.f9eadc75.chunk.js"
   ]
 }
